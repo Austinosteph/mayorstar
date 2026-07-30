@@ -48,7 +48,7 @@ export default function HeroCarousel() {
 
 	return (
 		<section
-			className="relative border-b border-slate-800/80 overflow-hidden py-3 sm:py-5 lg:py-8"
+			className="relative shadow-lg overflow-hidden py-3 sm:py-5 lg:py-8"
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
