@@ -1,0 +1,626 @@
+import { Product } from "@/types/product";
+
+export const PRODUCTS: Product[] = [
+  // --- AUDIO & HEADPHONES ---
+  {
+    id: "prod-1",
+    name: "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
+    slug: "sony-wh-1000xm5-headphones",
+    brand: "Sony",
+    category: "Audio",
+    price: 345000,
+    originalPrice: 395000,
+    discountPercent: 12,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&auto=format&fit=crop&q=80"
+    ],
+    description: "Industry-leading noise canceling with two processors and eight microphones. Ultra-comfortable lightweight design with soft fit leather.",
+    specifications: {
+      "Battery Life": "Up to 30 Hours",
+      "Noise Canceling": "Industry-leading Auto NC Optimizer",
+      "Driver Unit": "30mm precision engineered",
+      "Connectivity": "Bluetooth 5.2, 3.5mm Jack",
+      "Microphone": "4 beamforming microphones with AI noise reduction"
+    },
+    rating: 4.9,
+    reviewCount: 142,
+    stock: 12,
+    featured: true,
+    newArrival: false,
+    bestSeller: true
+  },
+  {
+    id: "prod-2",
+    name: "JBL Boombox 3 Portable Bluetooth Speaker",
+    slug: "jbl-boombox-3-speaker",
+    brand: "JBL",
+    category: "Speakers",
+    price: 480000,
+    originalPrice: 530000,
+    discountPercent: 9,
+    image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&auto=format&fit=crop&q=80"
+    ],
+    description: "Massive sound and deepest bass. Enjoy 24 hours of play time with IP67 dust and waterproof rating.",
+    specifications: {
+      "Playtime": "24 Hours",
+      "Water Resistance": "IP67 Dust & Waterproof",
+      "Output Power": "1x80W RMS-subwoofer + 2x40W RMS-midrange",
+      "Bluetooth": "Version 5.3"
+    },
+    rating: 4.8,
+    reviewCount: 89,
+    stock: 8,
+    featured: true,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-3",
+    name: "Apple AirPods Pro 2nd Gen (USB-C)",
+    slug: "apple-airpods-pro-2-usbc",
+    brand: "Apple",
+    category: "Earbuds",
+    price: 245000,
+    originalPrice: 280000,
+    discountPercent: 12,
+    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800&auto=format&fit=crop&q=80"
+    ],
+    description: "Up to 2x more Active Noise Cancellation. Adaptive Audio dynamically tailors noise control to your environment.",
+    specifications: {
+      "Chip": "Apple H2 Headphone Chip",
+      "Charging Case": "MagSafe (USB-C) with speaker and lanyard loop",
+      "Listening Time": "Up to 6 hours (30 hours total with case)",
+      "Sweat & Water Resistance": "IP54 dust, sweat, and water resistant"
+    },
+    rating: 4.9,
+    reviewCount: 215,
+    stock: 25,
+    featured: true,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-4",
+    name: "Bose QuietComfort Ultra Wireless Earbuds",
+    slug: "bose-quietcomfort-ultra-earbuds",
+    brand: "Bose",
+    category: "Earbuds",
+    price: 295000,
+    originalPrice: 320000,
+    discountPercent: 8,
+    image: "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Breakthrough spatialized audio for more immersive listening that makes your music feel realer than ever.",
+    specifications: {
+      "Audio Technology": "Bose Immersive Audio & CustomTune technology",
+      "Noise Cancellation": "Quiet, Aware, and Immersion modes",
+      "Battery Life": "Up to 6 hours per charge"
+    },
+    rating: 4.7,
+    reviewCount: 64,
+    stock: 6,
+    featured: false,
+    newArrival: true,
+    bestSeller: false
+  },
+
+  // --- SMART WATCHES ---
+  {
+    id: "prod-5",
+    name: "Apple Watch Series 9 GPS 45mm Midnight Aluminum",
+    slug: "apple-watch-series-9-45mm",
+    brand: "Apple",
+    category: "Smart Watches",
+    price: 420000,
+    originalPrice: 470000,
+    discountPercent: 10,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80"
+    ],
+    description: "Powerful S9 SiP chip with magic Double Tap gesture control. Brighter display, faster Siri, and advanced health tracking.",
+    specifications: {
+      "Display": "Always-On Retina display up to 2000 nits",
+      "Sensors": "ECG app, Blood Oxygen, Temperature sensing",
+      "Water Resistance": "50m swimproof",
+      "Battery": "18-hour battery life (36 hours in Low Power Mode)"
+    },
+    rating: 4.9,
+    reviewCount: 178,
+    stock: 14,
+    featured: true,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-6",
+    name: "Samsung Galaxy Watch6 Classic 47mm BT",
+    slug: "samsung-galaxy-watch6-classic",
+    brand: "Samsung",
+    category: "Smart Watches",
+    price: 360000,
+    originalPrice: 410000,
+    discountPercent: 12,
+    image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Iconic rotating bezel design with high-definition Sapphire Crystal glass and comprehensive health monitoring.",
+    specifications: {
+      "Bezel": "Physical Rotating Stainless Steel Bezel",
+      "Material": "Sapphire Crystal Glass",
+      "Sleep Tracking": "Advanced sleep coaching & snoring detection",
+      "OS": "Wear OS powered by Samsung"
+    },
+    rating: 4.7,
+    reviewCount: 93,
+    stock: 10,
+    featured: false,
+    newArrival: false,
+    bestSeller: true
+  },
+
+  // --- POWER BANKS & CHARGERS ---
+  {
+    id: "prod-7",
+    name: "Anker 737 Power Bank (PowerCore 24K) 140W",
+    slug: "anker-737-power-bank-24k-140w",
+    brand: "Anker",
+    category: "Power Banks",
+    price: 135000,
+    originalPrice: 160000,
+    discountPercent: 15,
+    image: "https://images.unsplash.com/photo-1609592424074-984405391a0c?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Ultra-powerful 24,000mAh portable charger with 140W bi-directional fast charging and smart digital display.",
+    specifications: {
+      "Capacity": "24,000 mAh",
+      "Max Output": "140W Power Delivery 3.1",
+      "Ports": "2x USB-C, 1x USB-A",
+      "Display": "Smart Digital Color Display showing input/output wattage"
+    },
+    rating: 4.9,
+    reviewCount: 310,
+    stock: 30,
+    featured: true,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-8",
+    name: "Baseus 65W GaN5 Pro Fast Desktop Charger",
+    slug: "baseus-65w-gan5-pro-charger",
+    brand: "Baseus",
+    category: "Chargers",
+    price: 45000,
+    originalPrice: 55000,
+    discountPercent: 18,
+    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Compact 65W GaN charger capable of fast-charging laptops, tablets, and smartphones simultaneously.",
+    specifications: {
+      "Technology": "GaN5 Fast Charge Tech",
+      "Output": "65W Max Multi-port",
+      "Ports": "2x USB-C + 1x USB-A",
+      "Protection": "BCT Smart Temperature Control"
+    },
+    rating: 4.8,
+    reviewCount: 154,
+    stock: 45,
+    featured: false,
+    newArrival: false,
+    bestSeller: true
+  },
+  {
+    id: "prod-9",
+    name: "Romoss PEA60 60000mAh 22.5W Power Bank",
+    slug: "romoss-pea60-60000mah-powerbank",
+    brand: "Romoss",
+    category: "Power Banks",
+    price: 78000,
+    originalPrice: 90000,
+    discountPercent: 13,
+    image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Monster capacity 60,000mAh battery for extended power outages, outdoor camping, and multiple device charges.",
+    specifications: {
+      "Capacity": "60,000 mAh",
+      "Fast Charging": "22.5W Two-Way Fast Charge",
+      "Inputs": "Type-C, Micro USB, Lightning",
+      "Outputs": "3x USB-A, 1x Type-C"
+    },
+    rating: 4.6,
+    reviewCount: 98,
+    stock: 18,
+    featured: false,
+    newArrival: true,
+    bestSeller: false
+  },
+
+  // --- TVS ---
+  {
+    id: "prod-10",
+    name: "LG 65-Inch C3 Series OLED evo 4K Smart TV",
+    slug: "lg-65-inch-c3-oled-4k-tv",
+    brand: "LG",
+    category: "TVs",
+    price: 1850000,
+    originalPrice: 2100000,
+    discountPercent: 11,
+    image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Self-lit OLED pixels delivering perfect black and infinite contrast. α9 AI Processor Gen6 for unparalleled picture quality.",
+    specifications: {
+      "Screen Size": "65 Inches OLED evo",
+      "Resolution": "4K Ultra HD (3840 x 2160)",
+      "Refresh Rate": "120Hz Native, G-Sync & FreeSync Premium",
+      "Smart OS": "webOS 23 with Hands-free Voice Control"
+    },
+    rating: 4.9,
+    reviewCount: 45,
+    stock: 4,
+    featured: true,
+    newArrival: false,
+    bestSeller: true
+  },
+  {
+    id: "prod-11",
+    name: "Samsung 55-Inch QN90C Neo QLED 4K Smart TV",
+    slug: "samsung-55-inch-qn90c-neo-qled-tv",
+    brand: "Samsung",
+    category: "TVs",
+    price: 1350000,
+    originalPrice: 1500000,
+    discountPercent: 10,
+    image: "https://images.unsplash.com/photo-1461151304267-38535e780c79?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Quantum Matrix Technology with Mini LEDs for ultra-precise light control and breathtaking color accuracy.",
+    specifications: {
+      "Screen Size": "55 Inches Neo QLED",
+      "Processor": "Neural Quantum Processor 4K",
+      "Audio": "Dolby Atmos with Object Tracking Sound+",
+      "Gaming": "4x HDMI 2.1 4K 120Hz"
+    },
+    rating: 4.8,
+    reviewCount: 38,
+    stock: 5,
+    featured: false,
+    newArrival: true,
+    bestSeller: false
+  },
+
+  // --- FANS & HOME COOLING ---
+  {
+    id: "prod-12",
+    name: "Dyson Purifier Cool TP07 Smart Air Purifying Fan",
+    slug: "dyson-purifier-cool-tp07-fan",
+    brand: "Dyson",
+    category: "Fans",
+    price: 495000,
+    originalPrice: 550000,
+    discountPercent: 10,
+    image: "https://images.unsplash.com/photo-1618941716939-553df3c6c278?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Bladeless oscillating tower fan with HEPA H13 air filtration system that captures 99.97% of airborne allergens.",
+    specifications: {
+      "Filtration": "HEPA H13 + Activated Carbon Filter",
+      "Oscillation": "350 Degrees Adjustable",
+      "Control": "Dyson Link App, Alexa, Google Assistant",
+      "Noise Level": "20% quieter than previous model"
+    },
+    rating: 4.8,
+    reviewCount: 71,
+    stock: 9,
+    featured: true,
+    newArrival: true,
+    bestSeller: false
+  },
+  {
+    id: "prod-13",
+    name: "Ox 18-Inch Standing Rechargeable Fan with Remote",
+    slug: "ox-18-inch-rechargeable-fan",
+    brand: "Ox",
+    category: "Fans",
+    price: 68000,
+    originalPrice: 78000,
+    discountPercent: 12,
+    image: "https://images.unsplash.com/photo-1565151443833-29bf2ba5dd8d?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "High-velocity 18-inch standing fan with long-lasting rechargeable lead-acid battery and solar charge port.",
+    specifications: {
+      "Battery Duration": "Up to 12 hours on low speed",
+      "Blade Diameter": "18 Inches 5-Blade system",
+      "Extra Features": "USB Mobile Phone Charger, LED Light, Remote Control"
+    },
+    rating: 4.7,
+    reviewCount: 189,
+    stock: 22,
+    featured: false,
+    newArrival: false,
+    bestSeller: true
+  },
+
+  // --- COOKING APPLIANCES & KETTLES ---
+  {
+    id: "prod-14",
+    name: "Ninja Foodi MAX DualZone 9.5L Digital Air Fryer",
+    slug: "ninja-foodi-max-dualzone-air-fryer",
+    brand: "Ninja",
+    category: "Cooking Appliances",
+    price: 285000,
+    originalPrice: 320000,
+    discountPercent: 11,
+    image: "https://images.unsplash.com/photo-1626078436894-3729d3c52a9a?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Cook 2 foods 2 ways that finish at the same time with 6 custom cooking functions: Air Fry, Max Crisp, Roast, Bake, Reheat, Dehydrate.",
+    specifications: {
+      "Capacity": "9.5 Liters total (2 independent 4.75L zones)",
+      "Power": "2470W",
+      "Functions": "6 Preset Cooking Programs",
+      "Dishwasher Safe": "Non-stick crisper plates"
+    },
+    rating: 4.9,
+    reviewCount: 260,
+    stock: 15,
+    featured: true,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-15",
+    name: "Russell Hobbs 1.7L Stainless Steel Smart Electric Kettle",
+    slug: "russell-hobbs-1-7l-smart-electric-kettle",
+    brand: "Russell Hobbs",
+    category: "Electric Kettles",
+    price: 42000,
+    originalPrice: 50000,
+    discountPercent: 16,
+    image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f6?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Rapid boiling 3000W electric kettle with quiet boil technology and precision temperature water indicator window.",
+    specifications: {
+      "Capacity": "1.7 Liters",
+      "Power": "3000 Watts Rapid Boil",
+      "Material": "Brushed Stainless Steel",
+      "Safety": "Auto Shut-off & Boil Dry Protection"
+    },
+    rating: 4.7,
+    reviewCount: 114,
+    stock: 35,
+    featured: false,
+    newArrival: false,
+    bestSeller: true
+  },
+  {
+    id: "prod-16",
+    name: "Philips Series 5000 Digital Touchscreen Air Fryer XL",
+    slug: "philips-series-5000-air-fryer-xl",
+    brand: "Philips",
+    category: "Cooking Appliances",
+    price: 195000,
+    originalPrice: 225000,
+    discountPercent: 13,
+    image: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Rapid CombiAir Technology with NutriU app integration for delicious, health-conscious meals with 90% less oil.",
+    specifications: {
+      "Capacity": "6.2 Liters (1.2kg)",
+      "Technology": "Rapid Air Technology",
+      "Presets": "14-in-1 Cooking functions",
+      "Display": "Digital Touch Panel"
+    },
+    rating: 4.8,
+    reviewCount: 140,
+    stock: 11,
+    featured: false,
+    newArrival: true,
+    bestSeller: false
+  },
+
+  // --- LAUNDRY & HOME APPLIANCES ---
+  {
+    id: "prod-17",
+    name: "Samsung 9kg EcoBubble Front Load Washing Machine",
+    slug: "samsung-9kg-ecobubble-washing-machine",
+    brand: "Samsung",
+    category: "Laundry Appliances",
+    price: 640000,
+    originalPrice: 710000,
+    discountPercent: 10,
+    image: "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "EcoBubble technology turns detergent into bubbles to penetrate fabric quickly and remove dirt easily, even in cool water.",
+    specifications: {
+      "Washing Capacity": "9.0 kg",
+      "Motor": "Digital Inverter Motor with 20 Year Warranty",
+      "Spin Speed": "1400 RPM",
+      "Steam Cycle": "Hygiene Steam Cycle removes 99.9% bacteria"
+    },
+    rating: 4.9,
+    reviewCount: 52,
+    stock: 7,
+    featured: true,
+    newArrival: false,
+    bestSeller: true
+  },
+  {
+    id: "prod-18",
+    name: "Roborock S8 Pro Ultra Robot Vacuum & Mop Cleaner",
+    slug: "roborock-s8-pro-ultra-robot-vacuum",
+    brand: "Roborock",
+    category: "Home Appliances",
+    price: 1250000,
+    originalPrice: 1400000,
+    discountPercent: 10,
+    image: "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "RockDock Ultra all-in-one docking system self-washes, self-dries, self-empties, self-refills, and self-cleans.",
+    specifications: {
+      "Suction Power": "6000 Pa Extreme Suction",
+      "Mop System": "VibraRise 2.0 Mopping System",
+      "Navigation": "PreciSense LiDAR Navigation & 3D Obstacle Avoidance",
+      "Battery": "5200 mAh (Up to 180 min runtime)"
+    },
+    rating: 4.9,
+    reviewCount: 68,
+    stock: 5,
+    featured: true,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-19",
+    name: "Haier Thermocool 200L Chest Freezer",
+    slug: "haier-thermocool-200l-chest-freezer",
+    brand: "Haier",
+    category: "Home Appliances",
+    price: 340000,
+    originalPrice: 380000,
+    discountPercent: 10,
+    image: "https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Deep freezing chest freezer with 100-hour cooling retention after power outage and low-voltage stability.",
+    specifications: {
+      "Storage Volume": "200 Liters",
+      "Cooling Retention": "100 Hours",
+      "Inner Liner": "Super-fast Freezing Aluminum",
+      "Key Lock": "Security Safety Lock"
+    },
+    rating: 4.7,
+    reviewCount: 165,
+    stock: 12,
+    featured: false,
+    newArrival: false,
+    bestSeller: true
+  },
+
+  // --- ACCESSORIES ---
+  {
+    id: "prod-20",
+    name: "Logitech MX Master 3S Wireless Performance Mouse",
+    slug: "logitech-mx-master-3s-mouse",
+    brand: "Logitech",
+    category: "Accessories",
+    price: 115000,
+    originalPrice: 130000,
+    discountPercent: 11,
+    image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Quiet Clicks with 8,000 DPI track-on-glass sensor and MagSpeed electromagnetic scrolling wheel.",
+    specifications: {
+      "DPI": "200 to 8000 DPI adjustable",
+      "Battery": "Rechargeable Li-Po (500 mAh) up to 70 days",
+      "Multi-Device": "Pair up to 3 devices via Logi Options+"
+    },
+    rating: 4.9,
+    reviewCount: 340,
+    stock: 28,
+    featured: true,
+    newArrival: false,
+    bestSeller: true
+  },
+  {
+    id: "prod-21",
+    name: "DJI Mini 4 Pro Fly More Combo Drone",
+    slug: "dji-mini-4-pro-fly-more-combo",
+    brand: "DJI",
+    category: "Accessories",
+    price: 1180000,
+    originalPrice: 1300000,
+    discountPercent: 9,
+    image: "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Under 249g mini drone with 4K/60fps HDR video, omnidirectional obstacle sensing, and 34-min flight time.",
+    specifications: {
+      "Weight": "< 249 g Regulation-Friendly",
+      "Camera": "1/1.3-inch CMOS 4K/60fps HDR",
+      "Transmission": "DJI O4 20km Video Transmission",
+      "Flight Time": "Up to 34 minutes per battery"
+    },
+    rating: 4.9,
+    reviewCount: 88,
+    stock: 6,
+    featured: true,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-22",
+    name: "UGREEN 100W Braided USB-C to USB-C Cable 2M",
+    slug: "ugreen-100w-usb-c-cable-2m",
+    brand: "UGREEN",
+    category: "Chargers",
+    price: 14000,
+    originalPrice: 18000,
+    discountPercent: 22,
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Durable nylon braided 100W PD 5A fast charging cable compatible with MacBook Pro, iPad Pro, and Galaxy S24.",
+    specifications: {
+      "Max Wattage": "100W Power Delivery (20V/5A)",
+      "Data Transfer": "480Mbps",
+      "Length": "2 Meters (6.6 ft)",
+      "Build": "High-density Nylon Braid with Aluminum Shell"
+    },
+    rating: 4.8,
+    reviewCount: 420,
+    stock: 80,
+    featured: false,
+    newArrival: true,
+    bestSeller: true
+  },
+  {
+    id: "prod-23",
+    name: "SanDisk Extreme Portable SSD 2TB V2 1050MB/s",
+    slug: "sandisk-extreme-portable-ssd-2tb",
+    brand: "SanDisk",
+    category: "Accessories",
+    price: 185000,
+    originalPrice: 210000,
+    discountPercent: 12,
+    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "Rugged, water and dust resistant NVMe storage with up to 1050MB/s read speeds in a compact pocket design.",
+    specifications: {
+      "Capacity": "2TB",
+      "Read Speed": "Up to 1050 MB/s",
+      "Write Speed": "Up to 1000 MB/s",
+      "Durability": "IP65 water and dust resistance, 3-meter drop protection"
+    },
+    rating: 4.9,
+    reviewCount: 210,
+    stock: 20,
+    featured: false,
+    newArrival: false,
+    bestSeller: true
+  },
+  {
+    id: "prod-24",
+    name: "Anker Soundcore Motion X600 Spatial Audio Speaker",
+    slug: "anker-soundcore-motion-x600-speaker",
+    brand: "Anker",
+    category: "Speakers",
+    price: 195000,
+    originalPrice: 220000,
+    discountPercent: 11,
+    image: "https://images.unsplash.com/photo-1543512214-318c7553f230?w=800&auto=format&fit=crop&q=80",
+    additionalImages: [],
+    description: "World's first portable high-res spatial audio speaker inspired by theater acoustics with 5 drivers and 5 amplifiers.",
+    specifications: {
+      "Audio": "5 Drivers, 50W Spatial Sound",
+      "Hi-Res": "Wireless Hi-Res Audio with LDAC support",
+      "Battery": "12 Hours Playtime",
+      "Water Resistance": "IPX7 Waterproof"
+    },
+    rating: 4.8,
+    reviewCount: 95,
+    stock: 14,
+    featured: false,
+    newArrival: true,
+    bestSeller: false
+  }
+];
