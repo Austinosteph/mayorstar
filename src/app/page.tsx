@@ -1,6 +1,7 @@
 import CartDrawer from '@/components/cart/CartDrawer';
 import HeroCarousel from '@/components/hero/HeroCarousel';
 import ProductGrid from '@/components/products/ProductGrid';
+import QuickViewModal from '@/components/products/QuickViewModal';
 
 export default function Home() {
 	return (
@@ -8,6 +9,7 @@ export default function Home() {
 			<HeroCarousel />
 			<ProductGrid />
 			<CartDrawer />
+			<QuickViewModal />
 		</div>
 	);
 }
