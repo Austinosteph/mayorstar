@@ -1,84 +1,103 @@
-import { create } from "zustand";
-import { persist, createJSONStorage } from "zustand/middleware";
-import { CartItem, Product } from "@/types/product";
+import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
+import { CartItem, Product } from '@/types/product';
 
 interface CartState {
-  items: CartItem[];
-  isOpen: boolean;
-  addItem: (product: Product, quantity?: number) => void;
-  removeItem: (productId: string) => void;
-  updateQuantity: (productId: string, quantity: number) => void;
-  clearCart: () => void;
-  openCart: () => void;
-  closeCart: () => void;
-  toggleCart: () => void;
-  getTotalItems: () => number;
-  getTotalPrice: () => number;
+	items: CartItem[];
+	isOpen: boolean;
+
+	addItem: (product: Product, quantity?: number) => void;
+	removeItem: (productId: string) => void;
+	updateQuantity: (productId: string, quantity: number) => void;
+	clearCart: () => void;
+
+	openCart: () => void;
+	closeCart: () => void;
+	toggleCart: () => void;
+
+	getTotalItems: () => number;
+	getTotalPrice: () => number;
 }
 
 export const useCartStore = create<CartState>()(
-  persist(
-    (set, get) => ({
-      items: [],
-      isOpen: false,
+	persist(
+		(set, get) => ({
+			items: [],
+			isOpen: false,
 
-      addItem: (product: Product, quantity = 1) => {
-        set((state) => {
-          const existingIndex = state.items.findIndex(
-            (item) => item.product.id === product.id
-          );
+			addItem: (product: Product, quantity = 1) => {
+				set((state) => {
+					const existingIndex = state.items.findIndex(
+						(item) => item.product.id === product.id,
+					);
 
-          if (existingIndex > -1) {
-            const newItems = [...state.items];
-            newItems[existingIndex].quantity += quantity;
-            return { items: newItems, isOpen: true };
-          }
+					// Product already exists in cart
+					if (existingIndex > -1) {
+						const newItems = [...state.items];
+						newItems[existingIndex] = {
+							...newItems[existingIndex],
+							quantity: newItems[existingIndex].quantity + quantity,
+						};
 
-          return {
-            items: [...state.items, { product, quantity }],
-            isOpen: true,
-          };
-        });
-      },
+						return {
+							items: newItems,
+						};
+					}
 
-      removeItem: (productId: string) => {
-        set((state) => ({
-          items: state.items.filter((item) => item.product.id !== productId),
-        }));
-      },
+					// Add new product
+					return {
+						items: [...state.items, { product, quantity }],
+					};
+				});
+			},
 
-      updateQuantity: (productId: string, quantity: number) => {
-        if (quantity <= 0) {
-          get().removeItem(productId);
-          return;
-        }
-        set((state) => ({
-          items: state.items.map((item) =>
-            item.product.id === productId ? { ...item, quantity } : item
-          ),
-        }));
-      },
+			removeItem: (productId: string) => {
+				set((state) => ({
+					items: state.items.filter((item) => item.product.id !== productId),
+				}));
+			},
 
-      clearCart: () => set({ items: [] }),
-      openCart: () => set({ isOpen: true }),
-      closeCart: () => set({ isOpen: false }),
-      toggleCart: () => set((state) => ({ isOpen: !state.isOpen })),
+			updateQuantity: (productId: string, quantity: number) => {
+				if (quantity <= 0) {
+					get().removeItem(productId);
+					return;
+				}
 
-      getTotalItems: () => {
-        return get().items.reduce((total, item) => total + item.quantity, 0);
-      },
+				set((state) => ({
+					items: state.items.map((item) =>
+						item.product.id === productId ? { ...item, quantity } : item,
+					),
+				}));
+			},
 
-      getTotalPrice: () => {
-        return get().items.reduce(
-          (total, item) => total + item.product.price * item.quantity,
-          0
-        );
-      },
-    }),
-    {
-      name: "mayorstar-cart-storage",
-      storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({ items: state.items }),
-    }
-  )
+			clearCart: () => set({ items: [] }),
+
+			openCart: () => set({ isOpen: true }),
+
+			closeCart: () => set({ isOpen: false }),
+
+			toggleCart: () =>
+				set((state) => ({
+					isOpen: !state.isOpen,
+				})),
+
+			getTotalItems: () => {
+				return get().items.reduce((total, item) => total + item.quantity, 0);
+			},
+
+			getTotalPrice: () => {
+				return get().items.reduce(
+					(total, item) => total + item.product.price * item.quantity,
+					0,
+				);
+			},
+		}),
+		{
+			name: 'mayorstar-cart-storage',
+			storage: createJSONStorage(() => localStorage),
+			partialize: (state) => ({
+				items: state.items,
+			}),
+		},
+	),
 );
