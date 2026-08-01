@@ -3,17 +3,7 @@
 import { useCartStore } from '@/store/useCartStore';
 import { formatPrice, getCartWhatsAppUrl } from '@/lib/whatsapp';
 import Image from 'next/image';
-import {
-	X,
-	Plus,
-	Minus,
-	Trash2,
-	ShoppingBag,
-	MessageCircle,
-	ArrowRight,
-	Sparkles,
-	ShieldCheck,
-} from 'lucide-react';
+import { X, Plus, Minus, Trash2, ShoppingBag, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CartDrawer() {
@@ -31,14 +21,6 @@ export default function CartDrawer() {
 	const totalItems = getTotalItems();
 	const totalPrice = getTotalPrice();
 	const whatsappUrl = getCartWhatsAppUrl(items, totalPrice);
-
-	// Free delivery threshold indicator (e.g. ₦100,000)
-	const freeDeliveryThreshold = 100000;
-	const isFreeDelivery = totalPrice >= freeDeliveryThreshold;
-	const progressPercent = Math.min(
-		100,
-		(totalPrice / freeDeliveryThreshold) * 100,
-	);
 
 	return (
 		<AnimatePresence>
